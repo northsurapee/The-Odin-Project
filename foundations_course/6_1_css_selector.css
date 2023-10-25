@@ -1,0 +1,70 @@
+ /* CSS (Cascading Style Sheets) use to style the web page */
+ /* Basic syntax including 
+    selector -> what HTML element to apply
+    property and value called -> apply these to HTML element */
+
+ /* Universal Selector : select all HTML element */
+ * {
+    color: purple;
+ }
+
+ /* Type selectors : select HTML element of that type */
+ /* all <div> type is selected */
+ div {
+    color: white;
+ }
+
+/* HTML class attributes
+   - most use
+   - we can give class to element
+   - element can have multiple class
+   - can add multiple class on a element seperate by spacebar like class="alert-text severe-alert"
+   - in class name, use hyphen(-) instead of spacebar
+   
+   ex. <div class="alert-text">Please agree to our terms of service.</div> */
+
+
+/* Class selectors : select all elements with the given class, */
+/* dot + case-sensitive class name */
+.alert-text {
+    color: red;
+}
+
+/* HTML ID attributes 
+    - for specific element only ex. link
+    - we can give ID to element
+    - like class but element can have only 1 ID
+
+    ex. <div id="title">My Awesome 90's Rage</div>
+*/
+
+/* ID selectors : select an element with the given ID */
+/* hastag + case-sensitive ID */
+#title {
+    background-color: red;
+}
+
+/* Grouping selector : group selector that share some style declarations */
+.read {
+    color: white;
+    background-color: black;
+    /* several unique declarations */
+}
+
+.unread {
+    color: white;
+    background-color: black;
+    /* several unique declarations */
+}
+/* we can group to */
+.read,
+.unread {
+    color: white;
+    background-color: black;
+}
+.read {
+    /* several unique declarations */
+}
+.unread {
+    /* several unique declarations */
+}
