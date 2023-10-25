@@ -1,0 +1,78 @@
+/* Color and background-color 
+   we can adjust opacity of colors by adding an alpha value (https://www.w3schools.com/cssref/css_colors_legal.php)*/
+  p {
+    /* hex example: */
+    color: #1100ff;
+  }
+  
+  p {
+    /* rgb example: */
+    color: rgb(100, 0, 127);
+  }
+  
+  p {
+    /* hsl example: */
+    color: hsl(15, 82%, 56%);
+  }
+
+/* Font family
+
+The font-family property can hold several font names as a "fallback" system.
+If the browser does not support the first font, it tries the next font.
+
+There are two types of font family names:
+family-name - The name of a font-family, like "times", "courier", "arial", etc.
+generic-family - The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
+
+Start with the font you want, and always end with a generic family,
+to let the browser pick a similar font in the generic family, if no other fonts are available.*/
+  p.a {
+    font-family: "Times New Roman", Times, serif;
+  }
+  p.b {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* Font size*/
+  div.a {
+    font-size: 15px;
+  }
+  div.b {
+    font-size: large;
+  }
+  div.c {
+    font-size: 150%;
+  }
+
+/* Font-weight */
+  p.normal {
+    font-weight: normal;
+  }
+  p.thick {
+    font-weight: bold;
+  }
+  p.thicker {
+    font-weight: 900;
+  }
+/* Text alignment */
+  div.a {
+    text-align: center;
+  }
+  
+  div.b {
+    text-align: left;
+  }
+  
+  div.c {
+    text-align: right;
+  }
+  
+  div.c {
+    text-align: justify;
+  }
+
+/* Image height and width */
+img {
+    height: auto;
+    width: 500px;
+}

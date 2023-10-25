@@ -2,18 +2,18 @@
  /* Basic syntax including 
     selector -> what HTML element to apply
     property and value called -> apply these to HTML element */
-
+/*----------------------------------------------------------------*/
  /* Universal Selector : select all HTML element */
  * {
     color: purple;
  }
-
+/*----------------------------------------------------------------*/
  /* Type selectors : select HTML element of that type */
  /* all <div> type is selected */
  div {
     color: white;
  }
-
+/*----------------------------------------------------------------*/
 /* HTML class attributes
    - most use
    - we can give class to element
@@ -29,7 +29,7 @@
 .alert-text {
     color: red;
 }
-
+/*----------------------------------------------------------------*/
 /* HTML ID attributes 
     - for specific element only ex. link
     - we can give ID to element
@@ -43,14 +43,13 @@
 #title {
     background-color: red;
 }
-
+/*----------------------------------------------------------------*/
 /* Grouping selector : group selector that share some style declarations */
 .read {
     color: white;
     background-color: black;
     /* several unique declarations */
 }
-
 .unread {
     color: white;
     background-color: black;
@@ -68,3 +67,35 @@
 .unread {
     /* several unique declarations */
 }
+/*----------------------------------------------------------------*/
+/* Chaining selectors : if we want to select element that have multiple class
+                        or class with ID (can't chain type)*/
+/* select element that is both subsection and header class */
+.subsection.header {
+    color: red;
+}
+/* select element that is subsection class and preview ID */
+.subsection#preview {
+    color: blue;
+}
+/*----------------------------------------------------------------*/
+/* Descendant combinator : child class is selected if it is nested inside "ancestor" class
+                           ,regardless of how deep that nesting is.
+                           (syntax like chaining but seperate by space)
+/*
+<div class="ancestor">
+  <!-- A -->
+  <div class="child">
+    <!-- B -->
+    <div class="child"><!-- C --></div>
+  </div>
+</div>
+
+<div class="child"></div>
+<!-- D -->
+*/
+.ancestor .child {
+    /* some declarations */
+}
+/* Class B, C is selected but D is not */
+/*----------------------------------------------------------------*/

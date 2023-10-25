@@ -1,0 +1,36 @@
+<!-- 
+Use combination of external and internal to add CSS to HTML 
+
+The properties you need to add to each element are:
+div: a red background, white text, a font size of 32px, center aligned, and bold
+p: a green background, white text, and a font size of 18px
+button: an orange background and a font size of 18px
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="solution.css"> <!-- external link -->
+    <!-- internal -->
+    <style>
+        p {
+          background-color: green;
+          color: white;
+          font-size: 18px;
+        }
+        button {
+          background-color: orange;
+          font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div>Style me via the external method!</div>
+    <p>I would like to be styled with the internal method, please.</p>
+    <button>internal method too!</button> 
+</body>
+</html>

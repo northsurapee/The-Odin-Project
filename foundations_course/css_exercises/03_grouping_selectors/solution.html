@@ -1,0 +1,32 @@
+<!--
+The first element: a black background and white text
+The second element: a yellow background
+Both elements: a font size of 28px and a list of fonts containing Helvetica and Times New Roman, with sans-serif as a fallback-->
+<!-- Single page -> use internal CSS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Selectors</title>
+    <style>
+        .inverted,
+        .fancy{
+            font-size: 28px;
+            font-family: Helvetica, "Times New Roman", sans-serif;
+        }
+        .inverted{
+            background-color: black;
+            color: white;
+        }
+        .fancy{
+            background-color: yellow;
+        }
+    </style>
+  </head>
+  <body>
+    <button class="inverted">Click Me!</button>
+    <button class="fancy">No, Click Me!</button>
+  </body>
+</html>
