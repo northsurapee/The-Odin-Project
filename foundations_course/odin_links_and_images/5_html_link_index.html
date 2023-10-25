@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Homepage</h1>
+
+    <!--Anchor element : wrapping the element we want to be a link-->
+    
+    <!--HTML attribute : give additional infomation to an HTML element
+                         and always in opening tag
+        ex. "use href (hypertext reference) attribute to tell url the anchor will go
+             (default is blue color with underline)-->
+
+    <!--href (hypertext reference): is attribute that tell url the anchor will go
+        target : is attribute that tell where the link will be opened
+                 default is "_self" which open the link in current tab
+                 _blank which open the link in new tab
+        rel : relation between current page and linked page (use for more security)
+              "noopener" -> prevents the opened link access to webpage from which it was opened
+              "noreferrer" -> prevents the opened link from knowing which webpage has a link to it-->
+
+    <!--recommendation : always pair a target="_blank" with a rel="noopener noreferrer".-->
+    
+    <a href="https://www.theodinproject.com/about" 
+       target="_blank" 
+       rel="noopener noreferrer">
+       ...Clink me and open in new tap...</a>
+
+    <!-- Absolute and relative links
+         Absolute link -> links to pages on other web "protocal://domain/path"
+         relative link -> links to other pages within our own website
+                          we use "./" before relative file path to tell it is 
+                          relative to the current directory of index.html-->
+    <a href="./pages/5_html_link_about.html">...About...</a>
+</body>
+</html>

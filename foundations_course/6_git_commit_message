@@ -1,0 +1,15 @@
+Effective commits consist of 2 seperate parts
+1. subject : a brief summary of the change you made
+2. blank line
+3. body (for a commit that need a bit of explanation) : describe the problem your commit solves and how
+
+ex. Should commit using text editor of vscode not -m option.
+---------------------------------------------------
+Add missing link and alt text to the company's logo
+
+Screen readers won't read the images to users with disabilities without this information
+---------------------------------------------------
+
+When to commit?
+- commit every time you have a meaningful change in the code
+- ex. fix type, fix bug
