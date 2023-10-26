@@ -1,0 +1,72 @@
+/*
+Cascade is what determines wich rules actually get apply to HTML.
+        There are 3 different factors that the cascade uses to determine this.
+*/
+
+/*
+1.Specificity is the level of selector, Specificity will only be taken into account 
+when an element has multiple, conflicting declarations targeting it
+    1. ID selectors (most specific selector)
+    2. Class selectors
+    3. Type selectors
+more selector -> more specificity too!
+*/
+#element {
+   color: red; 
+}
+.element {
+    color: green; 
+ }
+p {
+    color: blue; 
+}
+/*
+For this exmaple if an element is able to apply by all thsi rules
+red color will be applied (ID beat other) 
+*/
+
+/* rule 1 */
+#subsection {
+    background-color: yellow;
+    color: blue;
+  }
+  
+  /* rule 2 */
+  .main #subsection {
+   color: red;
+  }
+/*
+For this example rule2 will be applied because it have 1ID, 1class
+but rule 1 have just 1 id.
+*/
+
+/*
+Ingeritance : CSS rule ที่ apply ให้ตัวลูกโดยที่เราไม่ได้ตั้งใจเขียน
+              rule ตัวลูกตึงกว่า rule ตัวพ่อ
+ex. หากเราไม่ declare css ให้ child class,child class จะ inherit มาจาก parent class
+*/
+  .parent {
+    color: red;
+  }
+  
+  #child {
+    color: blue;
+  }
+  
+/*
+Rule order : last rule will be applied to the element.
+*/
+
+.alert {
+    color: red;
+  }
+  
+  .warning {
+    color: yellow;
+  }
+
+/*
+For an element that has both .alert & .warning classes, the cascade
+would run through every other factor. Sinece the .warning was the last one defined,
+it's the one that gets applied to the element.
+*/

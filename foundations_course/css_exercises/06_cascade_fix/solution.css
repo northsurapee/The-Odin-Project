@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*-------------------------------------------*/
+/* Order rule */
+.para {
+  font-size: 22px;
+}
+
+.small-para { /* chaining selectors, giving this rule a higher specificity */
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.para,
+.small-para {
+  color: hsl(0, 0%, 0%);
+  font-weight: 800;
+}
+/*-------------------------------------------*/
+/* Order rule */
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.confirm { /* can use ID selector instead or chaining selector */
+  background: green;
+  color: white;
+  font-weight: bold;
+} 
+/*-------------------------------------------*/
+/* chaining selector */
+div.text {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 100;
+}
+
+div.text.child { /* can use descendant selector instead */
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
+}
+/*-------------------------------------------*/
