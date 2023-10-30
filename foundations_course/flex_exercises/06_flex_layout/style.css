@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+}
+
+img {
+  width: 600px;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 8px 24px;
+  width: 400px;
+  margin-bottom: 16px;
+}
+
+/* Solutions
+We've added height: 100vh to the body... 
+this makes the body exactly the same height as the viewport (หน้าจอ).
+*/
+
+/* The center flex item of body :
+    it is a flex container for header, content, footer.
+    we set its flex direction to column to make items align in vertical*/
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* content: set flex: 1 to grow this flex item fit its flex container (body) */
+.content {
+    flex: 1; /* Grow/Shink content container to fit page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header/footer : not set flex:1 because we don't want it to grow or shrink*/
+.header,
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px
+}
+
+.footer {
+    background-color: #eee;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+button {
+    padding: 8px 16px; /* TopBot, LeftRight padding respectively*/
+}
+
+a {
+  color: #666;
+  text-decoration: none; /* เอาเส้นใต้ของลิ้งก์ออก */
+}
