@@ -1,0 +1,72 @@
+<!-- Challenge from MDN article : https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#active_learning_a_dynamic_shopping_list -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul></ul> <!--list to add an list item-->
+
+    <script>
+        // Create references variables
+        const list = document.querySelector('ul');
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+  
+        // Function response to the "Add item" button being clicked.
+        button.addEventListener('click', () => {
+          // store current value of input element
+          const myItem = input.value;
+          // empty input element
+          input.value = '';
+  
+          // create three new element
+          const listItem = document.createElement('li');
+          const listText = document.createElement('span');
+          const listBtn = document.createElement('button');
+  
+          // Append the span and button as children of listItem
+          listItem.appendChild(listText);
+          listText.textContent = myItem;
+          listItem.appendChild(listBtn);
+          listBtn.textContent = 'Delete';
+
+          // append listItem as child of the list
+          list.appendChild(listItem);
+            
+          // EventListener for listBtn button
+          listBtn.addEventListener('click', () => {
+            list.removeChild(listItem);
+          });
+  
+          // focus the input element ready for entering the next shopping list item.
+          // หลังขากกด "Add item" ช่อง "input" text จะพร้อมให้พิมพ์ทันที!
+          input.focus();
+        });
+      </script>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Method 1 : specify function attributes directly on your HTML elements.
+                    not recommend because we can only set on one property per DOM node. -->
+    <button id="btn1" onclick="alert('Hello World 1!')">Click Me 1</button>
+    
+    <!-- Method 2 : set properties of DOM nodes in JS
+                    still have same problem-->
+    <button id="btn2">Click Me 2</button>
+
+    <!-- Method 3 : attach event listeners to the DOM nodes in JS 
+                    allow multiple event listeners -> recommend! -->
+    <button id="btn3">Click Me 3</button>
+    
+</body>
+</html>
