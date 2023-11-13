@@ -1,0 +1,58 @@
+.grid-container {
+    resize: both; /*allows the user to resize the container by clicking and dragging from the bottom right corner.*/
+    overflow: auto; /*enable scrolling if we resize the container to be smaller than our grid can accommodate.*/
+    display: grid; 
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid grey;
+    background-color: skyblue;
+    
+    /* REPEAT */
+    /* Fractional units (fr) : 1fr = one fraction of container width */
+    
+    /* grid-template-rows: 150px 150px; */
+    grid-template-rows: repeat(2, 1fr); 
+    /* grid-template-columns: 150px 150px 150px 150px 150px; */
+    grid-template-columns: repeat(2, 125px) repeat(3, 1fr);
+  
+    /* Min-Max track size*/
+    grid-template-rows: repeat(2, min(200px, 50%)); /*50% grid container’s height*/
+    grid-template-columns: repeat(5, max(120px, 15%)); /*15% of the grid container’s width*/
+
+    /* minmax (specifically used with Grid)
+    - stop shrinking at 150px
+    - stop growing at 200px
+    */
+    grid-template-columns: repeat(5, minmax(150px, 200px));
+
+    /* clamp(min, ideal, max) */
+    grid-template-columns: repeat(5, clamp(150px, 20%, 200px)); /* popular combo! : static, dynamic, static*/
+
+    /* auto-fit : floor(container width / min width). ex. if container width = 900px, col=(900/150) = 6 column*/
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+
+    /* auto-fill : 
+    - like auto-fit in most case but difference in fewer items case
+    - not fill entire available space when there are fewer items than can fill up entire row.
+    */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+  
+  .grid-item {
+    background-color: #444;
+    text-align: center;
+    color: #ddd;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 12px;
+  }
+  
+  p {
+    margin: 12px auto 24px;
+  }
+  
+  img {
+    height: 60px;
+  }
+
+  

@@ -1,0 +1,29 @@
+/*
+DISPLAY : GRID
+.container become grid container :
+    - each 'directied child' of .container become grid items
+    - child under of these child not be a grid item
+*/
+.container {
+    display: grid;
+
+    /* COLUMNS */
+    /* Explicitly defining grid tracks to lay out our grid items.*/
+    grid-template-columns: 50px 50px; /* col1:50px, col2:50px */
+    grid-template-rows: 50px 50px; /* row1:50px, row2:50px */
+    /* or grid-template: 50px 50px / 50px 50px ; */
+
+    /* We can set the implicit grid track sizes using the grid-auto-rows 
+    and grid-auto-columns properties. In this way we can ensure 
+    any new tracks the implicit grid makes for extra content 
+    are set at values that we defined.*/
+    grid-auto-rows: 50px;
+
+    /* GAP */
+    column-gap: 10px;
+    row-gap: 50px;
+}
+
+.container > div {
+    border: 1px solid blue;
+}
